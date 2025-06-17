@@ -20,7 +20,7 @@ function App() {
     };
 
     update();
-    const timer = setInterval(update, 50); // Higher frequency for smooth countdown
+    const timer = setInterval(update, 60);
     onCleanup(() => clearInterval(timer));
   });
 
@@ -37,7 +37,41 @@ function App() {
 > unix <time>   - Convert unix timestamp to JAM slot
 > slot <number> - Convert JAM slot to unix timestamp
 > time <date>   - Convert date string to JAM slot
+> install       - Show installation and usage guide
 > clear         - Clear output`;
+    } else if (cmd === 'install') {
+      result = `JAMTime - JavaScript library for JAM Common Era timing
+
+Installation:
+npm install jamtime
+# or
+bun add jamtime
+
+Usage:
+import JAMTime from 'jamtime';
+
+// Get current timeslot
+const slot = JAMTime.getCurrentTimeslot();
+
+// Convert timestamps
+const unix = JAMTime.timeslotToUnix(slot);
+const backToSlot = JAMTime.unixToTimeslot(unix);
+
+// Get detailed time info
+const info = JAMTime.getTimeInfo(slot);
+
+API Methods:
+• getCurrentTimeslot() - Current JAM timeslot
+• unixToTimeslot(unix) - Convert Unix timestamp to timeslot
+• timeslotToUnix(slot) - Convert timeslot to Unix timestamp
+• getTimeInfo(slot) - Get detailed time information
+
+Constants:
+• JAM_COMMON_ERA: 1735732800 (Jan 1, 2025 12:00 UTC)
+• SLOT_DURATION: 6 seconds per slot
+• EPOCH_LENGTH: 600 slots per epoch
+
+More info: https://www.npmjs.com/package/jamtime`;
     } else if (cmd === 'current') {
       const current = JAMTime.getCurrentTimeslot();
       const info = JAMTime.getTimeInfo(current);
