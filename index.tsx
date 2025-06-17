@@ -150,7 +150,7 @@ Type 'help' for available commands`;
             <span class="text-pink-400">Time</span>
           </h1>
           <div class="text-sm text-gray-400">
-            Clock for JAM Common Era • Type 'help' for commands
+            Clock for JAM Common Era
           </div>
         </div>
 
@@ -213,10 +213,12 @@ Type 'help' for available commands`;
           </div>
         </div>
 
-        <div class="mt-6 text-center text-xs text-gray-600">
-          <div>npm install jamtime</div>
-          <div class="mt-1">
-            <a href="https://rotko.net" target="_blank" class="text-green-400 hover:text-green-300 transition-colors">rotko networks</a>
+        <div class="mt-6 text-center text-xs text-gray-300">
+          <div>
+            <a href="https://www.npmjs.com/package/jamtime" target="_blank" class="text-gray-300 hover:text-gray-200 transition-colors text-md">npm install jamtime</a>
+          </div>
+          <div class="mt-2">
+            <a href="https://rotko.net" target="_blank" class="text-green-300 hover:text-green-200 transition-colors text-md">rotko networks</a>
           </div>
         </div>
       </div>
