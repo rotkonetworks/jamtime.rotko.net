@@ -19,6 +19,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.2.6",
     "jamtime": "^1.1.3",
     "solid-js": "^1.9.7"
   }

@@ -2,6 +2,9 @@ import { render } from 'solid-js/web';
 import { createSignal, createEffect, onCleanup } from 'solid-js';
 import '@unocss/reset/tailwind.css';
 import 'uno.css';
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/600.css";
+import "@fontsource/jetbrains-mono/700.css";
 import JAMTime from 'jamtime';
 
 function App() {
@@ -146,7 +149,7 @@ Type 'help' for available commands`;
             <span class="text-gray-200">JAM</span>
             <span class="text-pink-400">Time</span>
           </h1>
-          <div class="text-sm text-gray-500">
+          <div class="text-sm text-gray-400">
             Clock for JAM Common Era • Type 'help' for commands
           </div>
         </div>
@@ -166,15 +169,15 @@ Type 'help' for available commands`;
             
             <div class="grid grid-cols-3 gap-4 text-xs">
               <div>
-                <div class="text-gray-500">Epoch</div>
+                <div class="text-gray-400">Epoch</div>
                 <div class="text-green-400">{JAMTime.getEpoch(slot()).toLocaleString()}</div>
               </div>
               <div>
-                <div class="text-gray-500">SlotInEpoch</div>
+                <div class="text-gray-400">SlotInEpoch</div>
                 <div class="text-cyan-400">{JAMTime.getSlotInEpoch(slot())}</div>
               </div>
               <div>
-                <div class="text-gray-500">Next Slot (s)</div>
+                <div class="text-gray-400">Next Slot (s)</div>
                 <div class="text-pink-400 font-bold">{timeToNext().toFixed(2)}</div>
               </div>
             </div>
@@ -191,8 +194,8 @@ Type 'help' for available commands`;
             });
           }}>
             <div class="text-green-400">JAMTime Terminal v1.0.0</div>
-            <div class="text-gray-500">JAM Common Era: January 1, 2025 12:00 UTC</div>
-            <div class="text-gray-500">Type 'help' for available commands</div>
+            <div class="text-gray-400">JAM Common Era: January 1, 2025 12:00 UTC</div>
+            <div class="text-gray-400">Type 'help' for available commands</div>
             {output() && <div class="text-pink-400">{output()}</div>}
           </div>
           
@@ -200,7 +203,7 @@ Type 'help' for available commands`;
             <span class="text-pink-400 mr-2">$</span>
             <input
               type="text"
-              class="flex-1 bg-transparent text-pink-400 outline-none placeholder-gray-600"
+              class="flex-1 bg-transparent text-pink-400 outline-none placeholder-gray-500"
               placeholder="Enter command..."
               value={input()}
               onInput={(e) => setInput(e.target.value)}
