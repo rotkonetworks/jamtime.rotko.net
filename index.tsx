@@ -170,7 +170,7 @@ Type 'help' for available commands`;
                 <div class="text-green-400">{JAMTime.getEpoch(slot()).toLocaleString()}</div>
               </div>
               <div>
-                <div class="text-gray-500">Slot/Epoch</div>
+                <div class="text-gray-500">SlotInEpoch</div>
                 <div class="text-cyan-400">{JAMTime.getSlotInEpoch(slot())}</div>
               </div>
               <div>
